@@ -1,0 +1,99 @@
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+    int category,item,qty,price=0;
+    printf("category:\nvegetables\nfruits\nsweets");
+    printf("enter category(1-3):");
+    scanf("%d",&category);
+    switch(category)
+    {
+    case 1:
+        printf("vegetables:\ntomato-$20\npotato-$25\ncarrot-$30\nbeans-$40\nonion-$25");
+        printf("select item(1-5):");
+        scanf("%d",&item);
+        switch(item)
+        {
+        case 1:
+            price=20;
+            break;
+        case 2:
+            price=25;
+            break;
+        case 3:
+            price=30;
+            break;
+        case 4:
+            price=40;
+            break;
+        case 5:
+            price=25;
+            break;
+        default:
+            printf("invalid item\n");
+        return 0;
+        }
+        break;
+    case 2:
+            printf("fruits:\napple-$100\nbanana-$50\norange-$120\nmango-$120\ngrapes-$100");
+            printf("select item(1-5)");
+            scanf("%d",&item);
+            switch (item)
+            {
+            case 1:
+                price=100;
+                break;
+            case 2:
+                price=50;
+                break;
+            case 3:
+                price=120;
+                break;
+            case 4:
+                price=120;
+                break;
+            case 5:
+                price=100;
+                break;
+            default:
+                printf("invalid item\n");
+                return 0;
+            }
+            break;
+            case 3:
+                printf("sweets:\nladdu-$35\nrasgulla-$50\nhalwa-$40\ngulab jamun-$50\njalebi-$15");
+                printf("select item(1-5)");
+                scanf("%d",&item);
+                switch(item)
+                {
+                case 1:
+                    price=35;
+                    break;
+                case 2:
+                    price=50;
+                    break;
+                case 3:
+                    price=40;
+                    break;
+                case 4:
+                    price=50;
+                    break;
+                case 5:
+                    price=15;
+                    break;
+                default:
+                    printf("invalid item\n");
+                return 0;
+                }
+                break;
+                default:
+                    printf("invalid category\n");
+                    return 0;
+     }
+     printf("enter qty(kg):");
+     scanf("%d",&qty);
+     printf("total amount $%d\n",price*qty);
+return 0;
+}
+
+
